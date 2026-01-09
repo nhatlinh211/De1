@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tokutei Gino 2 – Đề 1 (Câu 1–50)</title>
+
+  <style>
+    :root{
+      --border:#e6e6e6;
+      --muted:#666;
+      --bg:#fff;
+      --card:#fafafa;
+      --answer:#f5f5f5;
+      --tip:#d10000;
+    }
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color:#000;
+      padding:16px;
+      line-height:1.6;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+    h1{font-size:20px;margin:0 0 6px}
+    .sub{color:var(--muted);margin:0 0 16px}
+
+    .toolbar{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      align-items:center;
+      padding:10px 12px;
+      border:1px solid var(--border);
+      border-radius:10px;
+      background: var(--card);
+      margin: 0 0 16px;
+    }
+    .toolbar button{
+      cursor:pointer;
+      border:1px solid var(--border);
+      background:#fff;
+      padding:8px 10px;
+      border-radius:8px;
+      font-weight:600;
+    }
+    .toolbar button:hover{background:#f2f2f2}
+
+    section{
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:12px;
+      margin: 14px 0;
+      background:#fff;
+    }
+    section h2{
+      font-size:16px;
+      margin:0 0 8px;
+    }
+
+    .q{
+      border-top:1px solid var(--border);
+      padding:12px 0;
+    }
+    .q:first-of-type{border-top:none}
+    .q h3{
+      margin:0 0 8px;
+      font-size:15px;
+    }
+    .opt{
+      margin:4px 0;
+      padding-left: 2px;
+    }
+
+    .actions{
+      margin-top:8px;
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+    button{
+      margin-top:0;
+      cursor:pointer;
+      border:1px solid var(--border);
+      background:#fff;
+      padding:7px 10px;
+      border-radius:8px;
+      font-weight:600;
+    }
+    button:hover{background:#f2f2f2}
+
+    .answer{
+      display:none;
+      background: var(--answer);
+      padding:10px 12px;
+      margin-top:10px;
+      border-radius:10px;
+      border:1px solid var(--border);
+    }
+    .answer b{font-size: 14px;}
+    .tip{color:var(--tip);font-weight:800}
+
+    .footer{
+      margin:18px 0 6px;
+      color:var(--muted);
+      font-size:13px;
+    }
+  </style>
+
+  <script>
+    function toggle(id){
+      const el = document.getElementById(id);
+      const isHidden = (el.style.display === '' || el.style.display === 'none');
+      el.style.display = isHidden ? 'block' : 'none';
+    }
+    function showAll(){
+      document.querySelectorAll('.answer').forEach(el => el.style.display = 'block');
+    }
+    function hideAll(){
+      document.querySelectorAll('.answer').forEach(el => el.style.display = 'none');
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Tokutei Gino 2 – Đề 1 (Câu 1–50)</h1>
+  <p class="sub">Bản index đã chuẩn hóa layout + 50 câu đều có nút Ẩn/Hiện đáp án.</p>
+
+  <div class="toolbar">
+    <button onclick="showAll()">Hiện tất cả đáp án</button>
+    <button onclick="hideAll()">Ẩn tất cả đáp án</button>
+  </div>
+
+  <!-- PHẦN A -->
+  <section>
+    <h2>PHẦN A – CÂU 1 → 10</h2>
+
+    <div class="q">
+      <h3>1. 日本の建設工事の施工体制で、専門工事業者とは？</h3>
+      <div class="opt">A. 建設工事を注文する</div>
+      <div class="opt">B. 設計図書を作成する</div>
+      <div class="opt">C. 現場全体を監督する</div>
+      <div class="opt">D. 工事ごとの専門家で、職長の指示に従う</div>
+      <div class="actions">
+        <button onclick="toggle('a1')">Ẩn/Hiện đáp án</button>
+      </div>
+      <div id="a1" class="answer">
+        ✅ <b>Đáp án: D</b><br/>
+        🇻🇳 Nhà thầu chuyên môn, làm từng hạng mục theo chỉ đạo của 職長.<br/>
+        <span class="tip">MẸO: 専門工事業者 → 職長の指示</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>2. 朝礼（ちょうれい）の一番の目的は？</h3>
+      <div class="opt">A. Giới thiệu người mới</div>
+      <div class="opt">B. Tăng đoàn kết</div>
+      <div class="opt">C. 事故を防ぐこと</div>
+      <div class="opt">D. Truyền đạt công việc</div>
+      <div class="actions">
+        <button onclick="toggle('a2')">Ẩn/Hiện đáp án</button>
+      </div>
+      <div id="a2" class="answer">
+        ✅ <b>Đáp án: C</b><br/>
+        🇻🇳 Mục đích quan trọng nhất của 朝礼 là phòng tránh tai nạn.<br/>
+        <span class="tip">MẸO: 朝礼 → 事故防止</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>3. 労働災害補償保険の保険料は誰が払う？</h3>
+      <div class="opt">A. 国</div>
+      <div class="opt">B. 労働者30%</div>
+      <div class="opt">C. 全額 事業主</div>
+      <div class="opt">D. 労働者</div>
+      <div class="actions">
+        <button onclick="toggle('a3')">Ẩn/Hiện đáp án</button>
+      </div>
+      <div id="a3" class="answer">
+        ✅ <b>Đáp án: C</b><br/>
+        🇻🇳 Bảo hiểm tai nạn lao động do chủ doanh nghiệp trả 100%.<br/>
+        <span class="tip">MẸO: 労災保険 → 事業主100%</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>4. 技能検定に合格した人は何と名乗れる？</h3>
+      <div class="opt">A. 技能士（ぎのうし）</div>
+      <div class="opt">B. 技術士（ぎじゅつし）</div>
+      <div class="opt">C. 弁護士（べんごし）</div>
+      <div class="opt">D. 司法書士（しほうしょし）</div>
+      <div class="actions">
+        <button onclick="toggle('a4')">Ẩn/Hiện đáp án</button>
+      </div>
+      <div id="a4" class="answer">
+        ✅ <b>Đáp án: A</b><br/>
+        🇻🇳 Đỗ kỳ thi kỹ năng quốc gia được gọi là 技能士.
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>5. 産業廃棄物を運ぶために必要な許可は？</h3>
+      <div class="opt">A. 産業廃棄物収集運搬業の許可</div>
+      <div class="opt">B. 建設業許可</div>
+      <div class="opt">C. 発注者の許可</div>
+      <div class="opt">D. 設計者の許可</div>
+      <div class="actions">
+        <button onclick="toggle('a5')">Ẩn/Hiện đáp án</button>
+      </div>
+      <div id="a5" class="answer">
+        ✅ <b>Đáp án: A</b><br/>
+        🇻🇳 Phải có giấy phép thu gom & vận chuyển rác thải công nghiệp.
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>6. トランシーバーの使用を定めた法律は？</h3>
+      <div class="opt">A. 電気事業法</div>
+      <div class="opt">B. 電波法</div>
+      <div class="opt">C. 電気通信事業法</div>
+      <div class="opt">D. 航空法</div>
+      <div class="actions">
+        <button onclick="toggle('a6')">Ẩn/Hiện đáp án</button>
+      </div>
+      <div id="a6" class="answer">
+        ✅ <b>Đáp án: B</b><br/>
+        🇻🇳 Bộ đàm thuộc quản lý của Luật sóng vô tuyến.<br/>
+        <span class="tip">MẸO: 無線・トランシーバー → 電波法</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>7. 土木工事でふさわしくないものは？</h3>
+      <div class="opt">A. ダム工事</div>
+      <div class="opt">B. 河川・海岸工事</div>
+      <div class="opt">C. 山林</div>
+      <div class="opt">D. 住宅</div>
+      <div class="actions">
+        <button onclick="toggle('a7')">Ẩn/Hiện đáp án</button>
+      </div>
+      <div id="a7" class="answer">
+        ✅ <b>Đáp án: D</b><br/>
+        🇻🇳 Xây nhà thuộc kiến trúc, không phải 土木.
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>8. 橋梁工事の下部工で行う工事は？</h3>
+      <div class="opt">A. 外灯設置</div>
+      <div class="opt">B. 基礎工事</div>
+      <div class="opt">C. 橋本体工事</div>
+      <div class="opt">D. 護岸工事</div>
+      <div class="actions">
+        <button onclick="toggle('a8')">Ẩn/Hiện đáp án</button>
+      </div>
+      <div id="a8" class="answer">
+        ✅ <b>Đáp án: B</b><br/>
+        🇻🇳 下部工 = phần móng/trụ cầu (phần dưới).
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>9. 道路工事にない道路は？</h3>
+      <div class="opt">A. 高速道路</div>
+      <div class="opt">B. 都道</div>
+      <div class="opt">C. 林業用道路</div>
+      <div class="opt">D. とう道</div>
+      <div class="actions">
+        <button onclick="toggle('a9')">Ẩn/Hiện đáp án</button>
+      </div>
+      <div id="a9" class="answer">
+        ✅ <b>Đáp án: D</b><br/>
+        🇻🇳 とう道 không phải loại đường bộ chuẩn trong phân loại.
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>10. 建物にダンパーを付ける工事は？</h3>
+      <div class="opt">A. 制振工事</div>
+      <div class="opt">B. 耐震工事</div>
+      <div class="opt">C. 免震工事</div>
+      <div class="opt">D. 補強工事</div>
+      <div class="actions">
+        <button onclick="toggle('a10')">Ẩn/Hiện đáp án</button>
+      </div>
+      <div id="a10" class="answer">
+        ✅ <b>Đáp án: A</b><br/>
+        🇻🇳 Gắn damper để hấp thụ rung động là 制振.<br/>
+        <span class="tip">MẸO: ダンパー → 制振</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHẦN B -->
+  <section>
+    <h2>PHẦN B – CÂU 11 → 20</h2>
+
+    <div class="q">
+      <h3>11. 建物（たてもの）の揺（ゆ）れを制御（せいぎょ）するために、ダンパーなどを取り付ける工事は何ですか。</h3>
+      <div class="opt">A. 制振（せいしん）工事</div>
+      <div class="opt">B. 耐震（たいしん）工事</div>
+      <div class="opt">C. 免震（めんしん）工事</div>
+      <div class="opt">D. 補強（ほきょう）工事</div>
+      <div class="actions"><button onclick="toggle('a11')">Ẩn/Hiện đáp án</button></div>
+      <div id="a11" class="answer">
+        ✅ <b>Đáp án: A</b><br/>
+        🇻🇳 Gắn damper để hấp thụ rung lắc → 制振.<br/>
+        <span class="tip">MẸO: ダンパー = 制振</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>12. 空気の清浄や温度・湿度を調整する設備工事はどれですか。</h3>
+      <div class="opt">A. 給排水衛生設備工事</div>
+      <div class="opt">B. 冷凍空調設備工事</div>
+      <div class="opt">C. 保温保冷工事</div>
+      <div class="opt">D. 消防設備工事</div>
+      <div class="actions"><button onclick="toggle('a12')">Ẩn/Hiện đáp án</button></div>
+      <div id="a12" class="answer">
+        ✅ <b>Đáp án: B</b><br/>
+        🇻🇳 Điều hòa không khí / điều chỉnh nhiệt độ-độ ẩm → 空調.<br/>
+        <span class="tip">MẸO: 空調 = điều hòa</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>13. 低い土地に土砂を盛り上げて平らにする作業は何ですか。</h3>
+      <div class="opt">A. 切土（きりど）</div>
+      <div class="opt">B. 盛土（もりど）</div>
+      <div class="opt">C. 路盤（ろばん）</div>
+      <div class="opt">D. 擁壁（ようへき）</div>
+      <div class="actions"><button onclick="toggle('a13')">Ẩn/Hiện đáp án</button></div>
+      <div id="a13" class="answer">
+        ✅ <b>Đáp án: B</b><br/>
+        🇻🇳 Đắp đất cho cao lên → 盛土.<br/>
+        <span class="tip">MẸO: 盛る = đắp</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>14. 土砂や岩石を掘って取り除く作業は何ですか。</h3>
+      <div class="opt">A. 掘削（くっさく）作業</div>
+      <div class="opt">B. 盛土作業</div>
+      <div class="opt">C. 運搬作業</div>
+      <div class="opt">D. 締固め作業</div>
+      <div class="actions"><button onclick="toggle('a14')">Ẩn/Hiện đáp án</button></div>
+      <div id="a14" class="answer">
+        ✅ <b>Đáp án: A</b><br/>
+        🇻🇳 掘る = đào → 掘削.<br/>
+        <span class="tip">MẸO: 掘 = đào</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>15. 浚渫（しゅんせつ）工事とは何ですか。</h3>
+      <div class="opt">A. 海に土地を作る工事</div>
+      <div class="opt">B. 海や川の底の土砂を取り除く工事</div>
+      <div class="opt">C. 港の施設を作る工事</div>
+      <div class="opt">D. 防波堤工事</div>
+      <div class="actions"><button onclick="toggle('a15')">Ẩn/Hiện đáp án</button></div>
+      <div id="a15" class="answer">
+        ✅ <b>Đáp án: B</b><br/>
+        🇻🇳 浚渫 = nạo vét đáy sông/biển.<br/>
+        <span class="tip">MẸO: 渫 = vét</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>16. 温泉井工事の目的は何ですか。</h3>
+      <div class="opt">A. 地熱発電</div>
+      <div class="opt">B. 温泉をくみ上げる</div>
+      <div class="opt">C. 地下水をくみ上げる</div>
+      <div class="opt">D. 地層調査</div>
+      <div class="actions"><button onclick="toggle('a16')">Ẩn/Hiện đáp án</button></div>
+      <div id="a16" class="answer">
+        ✅ <b>Đáp án: B</b><br/>
+        🇻🇳 温泉井 = giếng nước nóng (khoan để bơm onsen).<br/>
+        <span class="tip">MẸO: 温泉 = onsen</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>17. 1mほど掘って砂を敷く工事は何ですか。</h3>
+      <div class="opt">A. 表装工事</div>
+      <div class="opt">B. 路盤工事</div>
+      <div class="opt">C. 基層工事</div>
+      <div class="opt">D. 路床工事</div>
+      <div class="actions"><button onclick="toggle('a17')">Ẩn/Hiện đáp án</button></div>
+      <div id="a17" class="answer">
+        ✅ <b>Đáp án: D</b><br/>
+        🇻🇳 路床 = lớp nền thấp nhất (đào xuống rồi rải cát).<br/>
+        <span class="tip">MẸO: 床 = nền</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>18. 三角形を基本とした構造は何ですか。</h3>
+      <div class="opt">A. ブレース構造</div>
+      <div class="opt">B. トラス構造</div>
+      <div class="opt">C. ラーメン構造</div>
+      <div class="opt">D. 三角構造</div>
+      <div class="actions"><button onclick="toggle('a18')">Ẩn/Hiện đáp án</button></div>
+      <div id="a18" class="answer">
+        ✅ <b>Đáp án: B</b><br/>
+        🇻🇳 トラス = kết cấu tam giác (truss).<br/>
+        <span class="tip">MẸO: トラス = tam giác</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>19. 鉄筋を加熱して圧力で接合する工法は何ですか。</h3>
+      <div class="opt">A. 溶接継手</div>
+      <div class="opt">B. ガス圧接継手</div>
+      <div class="opt">C. アーク溶接</div>
+      <div class="opt">D. ろう接</div>
+      <div class="actions"><button onclick="toggle('a19')">Ẩn/Hiện đáp án</button></div>
+      <div id="a19" class="answer">
+        ✅ <b>Đáp án: B</b><br/>
+        🇻🇳 Gas + ép áp lực để nối thép → ガス圧接.<br/>
+        <span class="tip">MẸO: 圧 = ép</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>20. 建物の壁や屋根を保護し美観を高める工事は何ですか。</h3>
+      <div class="opt">A. 塗装工事</div>
+      <div class="opt">B. 屋根工事</div>
+      <div class="opt">C. 造園工事</div>
+      <div class="opt">D. 左官工事</div>
+      <div class="actions"><button onclick="toggle('a20')">Ẩn/Hiện đáp án</button></div>
+      <div id="a20" class="answer">
+        ✅ <b>Đáp án: A</b><br/>
+        🇻🇳 塗る = sơn → 塗装工事.<br/>
+        <span class="tip">MẸO: 塗 = sơn</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHẦN C -->
+  <section>
+    <h2>PHẦN C – CÂU 21 → 30</h2>
+
+    <div class="q">
+      <h3>21. ウレタンフォームはどんな効果（こうか）がありますか。</h3>
+      <div class="opt">A. 断熱（だんねつ）効果</div>
+      <div class="opt">B. 防水（ぼうすい）効果</div>
+      <div class="opt">C. 保温（ほおん）効果</div>
+      <div class="opt">D. 保冷（ほれい）効果</div>
+      <div class="actions"><button onclick="toggle('a21')">Ẩn/Hiện đáp án</button></div>
+      <div id="a21" class="answer">
+        ✅ <b>Đáp án: A</b><br/>
+        🇻🇳 Urethane foam dùng để cách nhiệt → 断熱.<br/>
+        <span class="tip">MẸO: フォーム断熱 = cách nhiệt</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>22. 職長（しょくちょう）は誰（だれ）を指揮（しき）しますか。</h3>
+      <div class="opt">A. 作業責任者</div>
+      <div class="opt">B. 作業員</div>
+      <div class="opt">C. 主任技術者</div>
+      <div class="opt">D. 管理技術者</div>
+      <div class="actions"><button onclick="toggle('a22')">Ẩn/Hiện đáp án</button></div>
+      <div id="a22" class="answer">
+        ✅ <b>Đáp án: B</b><br/>
+        🇻🇳 職長 trực tiếp chỉ huy 作業員.<br/>
+        <span class="tip">MẸO: 職長 → 作業員</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>23. 作業を進める上で最も重要なことは何ですか。</h3>
+      <div class="opt">A. 機械の安全確保</div>
+      <div class="opt">B. 作業員の安全確保</div>
+      <div class="opt">C. 時間を守ること</div>
+      <div class="opt">D. 作業員の健康確保</div>
+      <div class="actions"><button onclick="toggle('a23')">Ẩn/Hiện đáp án</button></div>
+      <div id="a23" class="answer">
+        ✅ <b>Đáp án: B</b><br/>
+        🇻🇳 An toàn con người luôn ưu tiên số 1.<br/>
+        <span class="tip">MẸO: 安全第一 = 人</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>24. ホウレンソウの「連絡（れんらく）」の意味はどれですか。</h3>
+      <div class="opt">A. 問題があれば責任者や会社に伝える</div>
+      <div class="opt">B. 職長の役割を果たす</div>
+      <div class="opt">C. 問題があれば先輩に話す</div>
+      <div class="opt">D. 指示されたことを作業員に伝える</div>
+      <div class="actions"><button onclick="toggle('a24')">Ẩn/Hiện đáp án</button></div>
+      <div id="a24" class="answer">
+        ✅ <b>Đáp án: D</b><br/>
+        🇻🇳 連絡 = truyền đạt thông tin.<br/>
+        <span class="tip">MẸO: 連絡 = truyền tin</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>25. リーダーシップ能力とは何ですか。</h3>
+      <div class="opt">A. 期限内に達成する</div>
+      <div class="opt">B. 計画通りに達成する</div>
+      <div class="opt">C. 作業員を一つの目標にまとめる</div>
+      <div class="opt">D. 職長をまとめる</div>
+      <div class="actions"><button onclick="toggle('a25')">Ẩn/Hiện đáp án</button></div>
+      <div id="a25" class="answer">
+        ✅ <b>Đáp án: C</b><br/>
+        🇻🇳 Lãnh đạo = tập hợp con người về 1 mục tiêu.<br/>
+        <span class="tip">MẸO: リーダー = 人をまとめる</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>26. 人が情報を受け取り理解する心の動きは何ですか。</h3>
+      <div class="opt">A. 納得</div>
+      <div class="opt">B. 共感</div>
+      <div class="opt">C. 認知</div>
+      <div class="opt">D. 価値観</div>
+      <div class="actions"><button onclick="toggle('a26')">Ẩn/Hiện đáp án</button></div>
+      <div id="a26" class="answer">
+        ✅ <b>Đáp án: C</b><br/>
+        🇻🇳 認知 = nhận thức.<br/>
+        <span class="tip">MẸO: 認 = nhận</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>27. 手待ちの原因としてふさわしくないものはどれですか。</h3>
+      <div class="opt">A. クレーン待ち</div>
+      <div class="opt">B. 作業手順の不徹底</div>
+      <div class="opt">C. 材料不足</div>
+      <div class="opt">D. 前工程の遅れ</div>
+      <div class="actions"><button onclick="toggle('a27')">Ẩn/Hiện đáp án</button></div>
+      <div id="a27" class="answer">
+        ✅ <b>Đáp án: B</b><br/>
+        🇻🇳 “手待ち = chờ việc” thường do chờ cẩu/chờ vật tư/chờ công đoạn trước, còn “手順不徹底” là lỗi quản lý quy trình, không phải kiểu “đứng chờ” trực tiếp.<br/>
+        <span class="tip">MẸO: 手待ち = chờ (待つ)</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>28. 先に進んだ工程をやり直すことは何ですか。</h3>
+      <div class="opt">A. 手遅れ</div>
+      <div class="opt">B. 手違い</div>
+      <div class="opt">C. 手戻り</div>
+      <div class="opt">D. 手直し</div>
+      <div class="actions"><button onclick="toggle('a28')">Ẩn/Hiện đáp án</button></div>
+      <div id="a28" class="answer">
+        ✅ <b>Đáp án: C</b><br/>
+        🇻🇳 手戻り = làm lại vì phải quay lại bước trước.<br/>
+        <span class="tip">MẸO: 戻 = quay lại</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>29. PDCAサイクルの「D」は何ですか。</h3>
+      <div class="opt">A. 計画を実施する</div>
+      <div class="opt">B. 計画を立てる</div>
+      <div class="opt">C. 結果を評価する</div>
+      <div class="opt">D. 改善を行う</div>
+      <div class="actions"><button onclick="toggle('a29')">Ẩn/Hiện đáp án</button></div>
+      <div id="a29" class="answer">
+        ✅ <b>Đáp án: A</b><br/>
+        🇻🇳 D = Do = thực hiện.<br/>
+        <span class="tip">MẸO: D = Do</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>30. 労働安全衛生法で50人以上の場合、選任が必要なのは誰ですか。</h3>
+      <div class="opt">A. 現場監督</div>
+      <div class="opt">B. 設計者</div>
+      <div class="opt">C. 管理者</div>
+      <div class="opt">D. 安全管理者および衛生管理者</div>
+      <div class="actions"><button onclick="toggle('a30')">Ẩn/Hiện đáp án</button></div>
+      <div id="a30" class="answer">
+        ✅ <b>Đáp án: D</b><br/>
+        🇻🇳 50人以上 → phải có 安全管理者 + 衛生管理者.<br/>
+        <span class="tip">MẸO: 50人以上 → 安全＋衛生</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHẦN D -->
+  <section>
+    <h2>PHẦN D – CÂU 31 → 40</h2>
+
+    <div class="q">
+      <h3>31. 災害や事故が発生した場合の緊急措置で不適切なものはどれですか。</h3>
+      <div class="opt">A. 関係者へ緊急連絡する</div>
+      <div class="opt">B. 被災者の救命・応急手当を行う</div>
+      <div class="opt">C. 初期消火と二次災害防止を行う</div>
+      <div class="opt">D. 機械を停止させる前に被災者を救出する</div>
+      <div class="actions"><button onclick="toggle('a31')">Ẩn/Hiện đáp án</button></div>
+      <div id="a31" class="answer">
+        ✅ <b>Đáp án: D</b><br/>
+        🇻🇳 Phải dừng máy trước, nếu không cực nguy hiểm.<br/>
+        <span class="tip">MẸO: 救出 trước → 必ず停止！</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>32. 完成工事原価における「経費」とはどれですか。</h3>
+      <div class="opt">A. 人件費</div>
+      <div class="opt">B. 材料費</div>
+      <div class="opt">C. 発注費用</div>
+      <div class="opt">D. 材料費・労務費・外注費以外の費用</div>
+      <div class="actions"><button onclick="toggle('a32')">Ẩn/Hiện đáp án</button></div>
+      <div id="a32" class="answer">
+        ✅ <b>Đáp án: D</b><br/>
+        🇻🇳 経費 = chi phí ngoài 3 chi phí chính (材料・労務・外注).<br/>
+        <span class="tip">MẸO: 経費 = ngoài 3 chi phí chính</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>33. 建設における品質管理で正しいものはどれですか。</h3>
+      <div class="opt">A. 設計図書通りの品質を満たすための管理</div>
+      <div class="opt">B. 目的品質だけを得る管理</div>
+      <div class="opt">C. 教育は不要</div>
+      <div class="opt">D. 設計を把握しなくてよい</div>
+      <div class="actions"><button onclick="toggle('a33')">Ẩn/Hiện đáp án</button></div>
+      <div id="a33" class="answer">
+        ✅ <b>Đáp án: A</b><br/>
+        🇻🇳 Thi công phải đúng bản vẽ/tiêu chuẩn thiết kế.<br/>
+        <span class="tip">MẸO: 品質 = 設計通り</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>34. 労働安全衛生管理の目的で正しくないものはどれですか。</h3>
+      <div class="opt">A. 労働者の健康を守る</div>
+      <div class="opt">B. 働きやすい環境を提供する</div>
+      <div class="opt">C. 安全管理と衛生管理に分かれる</div>
+      <div class="opt">D. 原価管理でコストを下げる</div>
+      <div class="actions"><button onclick="toggle('a34')">Ẩn/Hiện đáp án</button></div>
+      <div id="a34" class="answer">
+        ✅ <b>Đáp án: D</b><br/>
+        🇻🇳 An toàn vệ sinh lao động không phải mục tiêu “giảm chi phí nguyên giá”.<br/>
+        <span class="tip">MẸO: 安全 ≠ 原価</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>35. 暑さ指数を下げる対策で不適切なものはどれですか。</h3>
+      <div class="opt">A. 遮光ネット</div>
+      <div class="opt">B. ドライミスト</div>
+      <div class="opt">C. 大型扇風機</div>
+      <div class="opt">D. 風を遮断</div>
+      <div class="actions"><button onclick="toggle('a35')">Ẩn/Hiện đáp án</button></div>
+      <div id="a35" class="answer">
+        ✅ <b>Đáp án: D</b><br/>
+        🇻🇳 Cần thông gió để mát, không được chắn gió.<br/>
+        <span class="tip">MẸO: 暑い → 風</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>36. 事務所労働者が50人以上の現場で設置義務があるのは何ですか。</h3>
+      <div class="opt">A. 安全衛生委員会</div>
+      <div class="opt">B. 監督者</div>
+      <div class="opt">C. 施工管理者</div>
+      <div class="opt">D. 職長</div>
+      <div class="actions"><button onclick="toggle('a36')">Ẩn/Hiện đáp án</button></div>
+      <div id="a36" class="answer">
+        ✅ <b>Đáp án: A</b><br/>
+        🇻🇳 50人以上 → bắt buộc có 安全衛生委員会.<br/>
+        <span class="tip">MẸO: 50人 → 委員会</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>37. 事故の定義として適切なものはどれですか。</h3>
+      <div class="opt">A. 基準から外れ被害が生じた事象</div>
+      <div class="opt">B. 人身事故のみ</div>
+      <div class="opt">C. 墜落・転落</div>
+      <div class="opt">D. 有害物質接触</div>
+      <div class="actions"><button onclick="toggle('a37')">Ẩn/Hiện đáp án</button></div>
+      <div id="a37" class="answer">
+        ✅ <b>Đáp án: A</b><br/>
+        🇻🇳 事故 = lệch chuẩn và phát sinh thiệt hại (被害).<br/>
+        <span class="tip">MẸO: 事故 = 被害</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>38. 危険な状態を近づけないようにすることは何といいますか。</h3>
+      <div class="opt">A. 隔離</div>
+      <div class="opt">B. 本質安全</div>
+      <div class="opt">C. 危険性</div>
+      <div class="opt">D. 不安全</div>
+      <div class="actions"><button onclick="toggle('a38')">Ẩn/Hiện đáp án</button></div>
+      <div id="a38" class="answer">
+        ✅ <b>Đáp án: A</b><br/>
+        🇻🇳 隔離 = cách ly để không lại gần nguy hiểm.<br/>
+        <span class="tip">MẸO: 隔 = cách</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>39. 建設業での「整頓」の定義はどれですか。</h3>
+      <div class="opt">A. 安全装備の管理</div>
+      <div class="opt">B. 不要物の撤去</div>
+      <div class="opt">C. 決められた場所に置く</div>
+      <div class="opt">D. 掃除する</div>
+      <div class="actions"><button onclick="toggle('a39')">Ẩn/Hiện đáp án</button></div>
+      <div id="a39" class="answer">
+        ✅ <b>Đáp án: C</b><br/>
+        🇻🇳 整頓 = đặt đúng vị trí quy định (定位置).<br/>
+        <span class="tip">MẸO: 整頓 = 定位置</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>40. KYTの基本手法として標準的なものはどれですか。</h3>
+      <div class="opt">A. KYT基礎4ラウンド法</div>
+      <div class="opt">B. 危険の洗い出し</div>
+      <div class="opt">C. 危険予知訓練</div>
+      <div class="opt">D. 生産性向上</div>
+      <div class="actions"><button onclick="toggle('a40')">Ẩn/Hiện đáp án</button></div>
+      <div id="a40" class="answer">
+        ✅ <b>Đáp án: A</b><br/>
+        🇻🇳 KYT chuẩn hay gặp: 基礎4ラウンド法.<br/>
+        <span class="tip">MẸO: KYT = 4ラウンド</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHẦN E -->
+  <section>
+    <h2>PHẦN E – CÂU 41 → 50</h2>
+
+    <div class="q">
+      <h3>41. 建築物全体の構成やデザイン、間取りが分かる図面はどれですか。</h3>
+      <div class="opt">A. 構造図（こうぞうず）</div>
+      <div class="opt">B. 意匠図（いしょうず）</div>
+      <div class="opt">C. 設備図（せつびず）</div>
+      <div class="opt">D. 外構図（がいこうず）</div>
+      <div class="actions"><button onclick="toggle('a41')">Ẩn/Hiện đáp án</button></div>
+      <div id="a41" class="answer">
+        ✅ <b>Đáp án: B</b><br/>
+        🇻🇳 意匠 = thiết kế, bố trí, mặt bằng, thẩm mỹ.<br/>
+        <span class="tip">MẸO: 見た目 → 意匠</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>42. 海洋土木工事で、海の中で作業できる人を何と呼びますか。</h3>
+      <div class="opt">A. ガス溶接作業者</div>
+      <div class="opt">B. 発破技士</div>
+      <div class="opt">C. 加減圧係員</div>
+      <div class="opt">D. 潜水士（せんすいし）</div>
+      <div class="actions"><button onclick="toggle('a42')">Ẩn/Hiện đáp án</button></div>
+      <div id="a42" class="answer">
+        ✅ <b>Đáp án: D</b><br/>
+        🇻🇳 潜る = lặn → 潜水士.<br/>
+        <span class="tip">MẸO: 潜 = lặn</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>43. 災害や事故発生時の対応で正しいものはどれですか。</h3>
+      <div class="opt">A. 慌てて機械を操作する</div>
+      <div class="opt">B. そのままにする</div>
+      <div class="opt">C. 早く逃げる</div>
+      <div class="opt">D. 機械を非常停止し被災者を救出する</div>
+      <div class="actions"><button onclick="toggle('a43')">Ẩn/Hiện đáp án</button></div>
+      <div id="a43" class="answer">
+        ✅ <b>Đáp án: D</b><br/>
+        🇻🇳 Dừng máy khẩn cấp rồi mới cứu người.<br/>
+        <span class="tip">MẸO: 停止 → 救出</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>44. 雇用保険法で保険料を払うのは誰ですか。</h3>
+      <div class="opt">A. 労働者本人</div>
+      <div class="opt">B. 事業主</div>
+      <div class="opt">C. 国庫負担</div>
+      <div class="opt">D. 労働者本人と事業主</div>
+      <div class="actions"><button onclick="toggle('a44')">Ẩn/Hiện đáp án</button></div>
+      <div id="a44" class="answer">
+        ✅ <b>Đáp án: D</b><br/>
+        🇻🇳 雇用保険 = cả người lao động và chủ cùng đóng.<br/>
+        <span class="tip">MẸO: 雇用保険 = 2 bên</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>45. 給排水衛生設備に含まれない工事はどれですか。</h3>
+      <div class="opt">A. 給水設備工事</div>
+      <div class="opt">B. 給湯設備工事</div>
+      <div class="opt">C. 排水・通気設備</div>
+      <div class="opt">D. 吹き付けウレタン断熱工事</div>
+      <div class="actions"><button onclick="toggle('a45')">Ẩn/Hiện đáp án</button></div>
+      <div id="a45" class="answer">
+        ✅ <b>Đáp án: D</b><br/>
+        🇻🇳 断熱 (cách nhiệt) không thuộc nhóm cấp thoát nước vệ sinh.<br/>
+        <span class="tip">MẸO: 断熱 ≠ 給排水</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>46. 橋梁工事は何のために行う工事ですか。</h3>
+      <div class="opt">A. 人や車が通行するため</div>
+      <div class="opt">B. 山林を渡るため</div>
+      <div class="opt">C. 水量調整のため</div>
+      <div class="opt">D. 海や川を渡るため</div>
+      <div class="actions"><button onclick="toggle('a46')">Ẩn/Hiện đáp án</button></div>
+      <div id="a46" class="answer">
+        ✅ <b>Đáp án: A</b><br/>
+        🇻🇳 Cầu để người và xe đi lại (通行).<br/>
+        <span class="tip">MẸO: 橋 = 通行</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>47. 思い込みや見違いなどが原因のヒューマンエラーは何ですか。</h3>
+      <div class="opt">A. 認知ミス</div>
+      <div class="opt">B. 連絡不足</div>
+      <div class="opt">C. 慣れによる手抜き</div>
+      <div class="opt">D. 集団欠陥</div>
+      <div class="actions"><button onclick="toggle('a47')">Ẩn/Hiện đáp án</button></div>
+      <div id="a47" class="answer">
+        ✅ <b>Đáp án: A</b><br/>
+        🇻🇳 Do nhận thức sai, tưởng nhầm, nhìn nhầm → 認知ミス.<br/>
+        <span class="tip">MẸO: 思い込み = 認知</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>48. 危険を事前に認識し対策を考える能力は何ですか。</h3>
+      <div class="opt">A. 危険性・有害性の認識能力</div>
+      <div class="opt">B. 安全教育能力</div>
+      <div class="opt">C. 事故対応能力</div>
+      <div class="opt">D. 現場監督能力</div>
+      <div class="actions"><button onclick="toggle('a48')">Ẩn/Hiện đáp án</button></div>
+      <div id="a48" class="answer">
+        ✅ <b>Đáp án: A</b><br/>
+        🇻🇳 Nhận diện nguy hiểm trước khi làm và nghĩ biện pháp → 危険認識能力.<br/>
+        <span class="tip">MẸO: 事前 = 危険認識</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>49. 職長の役割でないものはどれですか。</h3>
+      <div class="opt">A. 人材管理</div>
+      <div class="opt">B. 設計図の修正</div>
+      <div class="opt">C. 他職種との連絡・調整</div>
+      <div class="opt">D. 資材や機械の確認・点検</div>
+      <div class="actions"><button onclick="toggle('a49')">Ẩn/Hiện đáp án</button></div>
+      <div id="a49" class="answer">
+        ✅ <b>Đáp án: B</b><br/>
+        🇻🇳 Sửa bản vẽ là việc của thiết kế/設計者, không phải 職長.<br/>
+        <span class="tip">MẸO: 設計図 sửa = 設計者</span>
+      </div>
+    </div>
+
+    <div class="q">
+      <h3>50. 指導の正しい定義はどれですか。</h3>
+      <div class="opt">A. 不適切な言動をする</div>
+      <div class="opt">B. 個人情報を話す</div>
+      <div class="opt">C. 低い仕事を与える</div>
+      <div class="opt">D. 成長を促す建設的なアドバイスを行う</div>
+      <div class="actions"><button onclick="toggle('a50')">Ẩn/Hiện đáp án</button></div>
+      <div id="a50" class="answer">
+        ✅ <b>Đáp án: D</b><br/>
+        🇻🇳 指導 = hướng dẫn để người khác phát triển (xây dựng).<br/>
+        <span class="tip">MẸO: 指導 = 成長</span>
+      </div>
+    </div>
+  </section>
+
+  <p class="footer">Gợi ý: nếu sếp muốn “một nút chỉ hiện đáp án đúng (không cần giải thích)”, tôi cũng chỉnh được luôn.</p>
+</body>
+</html>
